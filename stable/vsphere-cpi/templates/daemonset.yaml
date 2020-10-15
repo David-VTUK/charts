@@ -39,7 +39,7 @@ spec:
         {{- end }}
     spec:
       nodeSelector:
-        node-role.kubernetes.io/master: ""
+        node-role.kubernetes.io/controlplane: "true"
       {{- if .Values.daemonset.nodeSelector }}
       {{- toYaml .Values.daemonset.nodeSelector | indent 8 }}
       {{- end }}
