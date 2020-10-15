@@ -48,10 +48,8 @@ spec:
         value: "true"
         effect: NoSchedule
       - key: node-role.kubernetes.io/controlplane
-        value: "true"
         effect: NoSchedule
       - key: node-role.kubernetes.io/etcd
-        value: "true"
         effect: NoExecute
       {{- if .Values.daemonset.tolerations }}
       {{- toYaml .Values.daemonset.tolerations | indent 8 }}
